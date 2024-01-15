@@ -2,7 +2,7 @@ for (let i = 0; i < 5; i++) {
     console.log(i);
 }
 
-const studentNames = ['Jonas', 'Maryte', 'Petras', 'Ona'];
+const studentNames = ['Jonas', 'Maryte', 'Petras',  'Ona'];
 
 for (let i = 0; i < studentNames.length; i++) {
     const studentName = studentNames[i];
