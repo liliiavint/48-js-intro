@@ -34,7 +34,8 @@
       "string": "node --watch kintamieji/string.js",
       "number": "node --watch kintamieji/number.js",
       "practica": "node --watch practica",
-      "cap": "node --watch cap",
+      "s": "node --watch s.js",
+      "cap": "node --watch cap.js",
       "dev": "nodemon index.js"
   },
   "keywords": [],
