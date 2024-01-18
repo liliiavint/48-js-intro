@@ -284,6 +284,9 @@ function removeEveryOther(arr){
    return count
 }
 
+
+
+
   console.log('==========================================');
   function warnTheSheep(queue) {
     for(let i = queue.length; i > 0; i--){
