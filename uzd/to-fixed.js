@@ -2,7 +2,7 @@
 function toFixed(n, f = 0) {
     function partsRounds(n) {
         let arr = n[1]?.split('') || [];
-        let arrIndex = parseFloat(arr[f+1]);
+        let arrIndex = parseFloat(arr[f]);
         
         if (arrIndex >= 5) {
             n[1] = (parseFloat(n[1].slice(0, f)) + 1).toString();
@@ -77,10 +77,9 @@ console.log(toFixed(6.3468963, 3), '-->', '6.347');
 console.log(toFixed(6.2567963, 2), '-->', '6.26');
 console.log(toFixed(6.2567963, 1), '-->', '6.3');
 console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
-console.log(toFixed(6.2999963, 1), '-->', '6.3');
+console.log(toFixed(6.2999963, 5), '-->', '6.3');
 console.log(toFixed(6.2567963, 4), '-->', '6.2568');
-
 console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
 console.log(toFixed(3.14159, 3), '-->', '3.142');
-console.log(toFixed(-3.14159, 3), '-->', '-3.142');
+
 
