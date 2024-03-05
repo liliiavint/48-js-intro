@@ -27,7 +27,7 @@ function toFixed(n, f = 0) {
         return sveikojiDalis;
     }
 
-    return sveikojiDalis + (desimtaineDalis ? '.' + (desimtaineDalis + '0'.repeat(f)).slice(0, f) : '');
+    return sveikojiDalis + '.' + (desimtaineDalis + '0'.repeat(f)).slice(0, f);
 }
 
 
@@ -72,15 +72,15 @@ console.log(toFixed(3.1, 2), '-->', '3.10');
 console.log(toFixed(-3.1, 2), '-->', '-3.10');
 console.log(toFixed(3, 3), '-->', '3.000');
 console.log(toFixed(-3, 3), '-->', '-3.000');
-
+console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
 console.log(toFixed(6.3468963, 3), '-->', '6.347');
 console.log(toFixed(6.2567963, 2), '-->', '6.26');
 console.log(toFixed(6.2567963, 1), '-->', '6.3');
-
+console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
 console.log(toFixed(6.2999963, 1), '-->', '6.3');
 console.log(toFixed(6.2567963, 4), '-->', '6.2568');
 
-
+console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
 console.log(toFixed(3.14159, 3), '-->', '3.142');
 console.log(toFixed(-3.14159, 3), '-->', '-3.142');
 
