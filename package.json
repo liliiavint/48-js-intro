@@ -5,6 +5,7 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
+      "to-fixed": "node --watch uzd/to-fixed.js",
       "destructuring": "node --watch operators/destructuring.js",
       "uzd.destyt": "node --watch decision/uzd.destyt.js",
       "uzd.mentor": "node --watch decision/uzd.mentor.js",
