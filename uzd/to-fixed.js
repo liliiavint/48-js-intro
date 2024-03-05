@@ -6,7 +6,7 @@ function toFixed(n, f = 0) {
 
     const text = '' + n;
     const parts = text.split('.');
-    const partsRounds = mathRuond(parts)
+    const partsRounds = mathRound(parts)
     const sveikojiDalis = partsRounds[0];
     // const desimtaineDalis = parts[1] || ''; // || jei reiksme falsy ('', 0, false, undefined, null)
     const desimtaineDalis = partsRounds[1] ?? ''; // ?? jei reiksme neegzistuoja
@@ -17,11 +17,10 @@ function toFixed(n, f = 0) {
 
     return sveikojiDalis + '.' + (desimtaineDalis + '0'.repeat(f)).slice(0, f);
 }
-function mathRuond(n){
-
-    let hh = n[1]?.split('') || [];
-    let h1 = parseFloat(hh.at(-1));
-    if(h1 >= 5){
+function mathRound(n){
+    let arr = n[1]?.split('') || [];
+    let arrIndex = parseFloat(arr.at(-1));
+    if(arrIndex >= 5){
         return [n[0], (parseFloat(n[1].slice(0, -1))+1).toString()]
     }else{
         return n;
