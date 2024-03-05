@@ -17,6 +17,25 @@ function toFixed(n, f = 0) {
 
     return sveikojiDalis + '.' + (desimtaineDalis + '0'.repeat(f)).slice(0, f);
 }
+function mathRuond(n){
+
+    let hh = n[1]?.split('') || [];
+    let h1 = parseFloat(hh.at(-1));
+    if(h1 >= 5){
+        return [n[0], (parseFloat(n[1].slice(0, -1))+1).toString()]
+    }else{
+        return n;
+    }
+
+}
+
+
+
+
+
+
+
+
 /*function toFixed2(n, f = 0){
 const desimtaineDalis = n > 0 ? n % 1 : -n % 1;
 const sveikojiDalis = n - desimtaineDalis;
@@ -59,14 +78,3 @@ console.log(toFixed(6.2568963, 4), '-->', '6.2569');
 console.log(toFixed(3.14159, 3), '-->', '3.142');
 console.log(toFixed(-3.14159, 3), '-->', '-3.142');
 
-function mathRuond(n){
-
-    let hh = n[1]?.split('') || [];
-    let h1 = parseFloat(hh.at(-1));
-    if(h1 >= 5){
-        return [n[0], (parseFloat(n[1].slice(0, -1))+1).toString()]
-    }else{
-        return n;
-    }
-
-}
