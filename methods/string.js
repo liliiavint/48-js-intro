@@ -44,14 +44,14 @@ console.log('Labas'.startsWith('a'));
 console.log('Labas'.endsWith('a'));
 console.log('Labas'.endsWith('s'));
 console.log('Labas'.endsWith('as'));
-console.log('Labas'.endsWith('bas'));
+console.log('Labas'.endsWith('bas'), '222222');
 
 console.log('-----------------');
 
 console.log('Labas'.charAt(-5));
 console.log('Labas'.at(-5));
 
-console.log('Labas'.charAt(1));
+console.log('Labas'.charAt(1), '[[[[[[[[');
 console.log('Labas'.at(1));
 
 console.log('Labas'.charAt(5415));
@@ -59,13 +59,13 @@ console.log('Labas'.at(5415));
 
 console.log('-----------------');
 
-console.log('Labas'.charCodeAt(0));
+console.log('Labas'.charCodeAt(0), '------------');
 console.log('Labas'.charCodeAt(1));
 console.log('Labas'.charCodeAt(2));
 console.log('Labas'.charCodeAt(3));
 console.log('Labas'.charCodeAt(4));
 
-console.log(String.fromCharCode(76));
+console.log(String.fromCharCode(76), '////////');
 console.log(String.fromCharCode(97));
 console.log(String.fromCharCode(98));
 console.log(String.fromCharCode(99));
