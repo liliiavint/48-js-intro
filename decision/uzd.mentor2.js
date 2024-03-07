@@ -119,7 +119,7 @@ function pakeistiTexta(text, a, b){
     }
 }
 
-console.log('11.', pakeistiTexta('pienas yra baltas', 'yra', 'nera'))
+console.log('11.', pakeistiTexta('Buva dūda Vilniuj. Buva dūda Vilniuj.', 'dūda', 'Duda'))
 
 /*12. Sukurkite funkciją, kuri priima temperatūrą Celsijaus
  laipsniais ir konvertuoja ją į  laipsnius.
@@ -196,11 +196,14 @@ pakeisdamas kiekvieną raidę į sekantį raidę abėcėlėje.*/
         let letterPlus = textNumber.map(n => n + 1);
         let NewText = ' '
         for(let i = 0; i <= letterPlus.length; i++){
-            NewText += String.fromCharCode(newas[i]).replace('!', ' ')
+            NewText += String.fromCharCode(letterPlus[i]).replace('!', ' ')
             
        }
-      
+      return NewText;
     }
+    console.log(replaceLetter('Hello World'))
+
+
 /*18.  Sukurkite funkciją,
  kuri priima gimimo metus ir grąžina asmenio amžių.
 */
@@ -217,7 +220,7 @@ Paskutinė užduotis sunkesnė ir jei pasirodė praeitos užduotys
  
  const textSymbol = (text, a) => text.split(`${a}`).length - 1;
 
- console.log('19.', textSymbol('Te//?????55555*****xt', 'T'));
+ console.log('19.', textSymbol('Te//?????55555*****xt', '?'));
 
  /*20. Parašykite funkciją, kuri priima kelių masyvų sąrašą 
  ir grąžina naują masyvą, kuris sudarytas tik iš tų elementų, 
