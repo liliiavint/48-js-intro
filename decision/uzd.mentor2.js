@@ -232,11 +232,14 @@ ji veiktų kuo efektyviau su dideliais masyvais. Unikalumas:
 grąžinamame masyve neturėtų būti pasikartojančių elementų.*/
 
 const KeliuMasyvaBeDublikatu = array => array.map(subArray => subArray.filter((item, index, arr) => arr.indexOf(item) === index)).flat().filter((item, index, arr) => arr.indexOf(item) === index);
-                                                                                             
-
+                                                                                          
 console.log('20.', KeliuMasyvaBeDublikatu([[1, 2, 2, 2, 800, 1000, 100], [3, 64, 2,  58, 77, 5, 55, 55, 4, 4], [5, 6, 6, 9, 100, 9, 7,  7]]));
+const KeliuMasyvaBeDublikatu2 = array => array.flat(Infinity).filter((item, index, arr) => arr.indexOf(item) === index);                                                                                            
 
+console.log('20.1', KeliuMasyvaBeDublikatu2([[1, 2, 2, 2, 800, [3, 800], 1000, 100], [3, 64, 2,  58, 77, 5, 55, 55, 4, 4], [5, 6, 6, 9, 100, 9, [6, 100, 45], 7,  7]]));
+const arr2 = [0, 1, [2, [3, [4, 5]]]];
 
+console.log(arr2.flat(2));
 
 /*
 let arrabecele = 'abcefghijklmnopqrstuvwxyz';
