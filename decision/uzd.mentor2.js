@@ -231,16 +231,27 @@ iš skaičių.Veiksmingumas: stenkitės optimizuoti funkciją taip, kad
 ji veiktų kuo efektyviau su dideliais masyvais. Unikalumas: 
 grąžinamame masyve neturėtų būti pasikartojančių elementų.*/
 
-const KeliuMasyvaBeDublikatu = array => array.map(subArray => subArray.filter((item, index, arr) => arr.indexOf(item) !== index));
-                                                                                
-console.log('20.', KeliuMasyvaBeDublikatu([[1, 2, 2, 2, 800, 1000, 100], [3, 64, 4,  58, 77, 5, 55, 55, 4, 4], [5, 6, 6, 9, 100, 9, 7,  7]]));
+//Kartoti elementus atskiruose masyvuose 
+//kurie pasikartoja visuose pradiniuose masyvuose.
+const KeliuMasyvaBeDublikatusuMap = array => array.map(subArray => subArray.filter((item, index, arr) => arr.indexOf(item) !== index));
+console.log('20.suMap', KeliuMasyvaBeDublikatusuMap([[1, 2, 2, 2, 800, 1000], [3, 64, 4,  58, 77, 5, 55, 55, 4, 4], [5, 6, 6, 9, 100, 9, 7,  7, 100]]));
 
-const KeliuMasyvaBeDublikatu2 = array => array.flat(Infinity).filter((item, index, arr) => arr.indexOf(item) === index);                                                                                            
-console.log('20.1', KeliuMasyvaBeDublikatu2([[1, 2, 2, 2, 800, [3, 800], 1000, 100], [3, 64, 2,  58, 77, 5, 55, 55, 4, 4], [5, 6, 6, 9, 100, 9, [6, 100, 45], 7,  7]]));
+
+const KeliuMasyvaBeDublikatusuForeach = array => array.forEach(subArray => subArray.filter((item, index, arr) => arr.indexOf(item) !== index));
+console.log('20.suForeach', KeliuMasyvaBeDublikatusuForeach([[1, 2, 2, 2, 800, 1000], [3, 64, 4,  58, 77, 5, 55, 55, 4, 4], [5, 6, 6, 9, 100, 9, 7,  7, 100]]));
+
 
 const KeliuMasyvaBeDublikatu3 = array => array.map(subArray => subArray.filter((item, index, arr) => arr.indexOf(item) !== index)).flat().filter((item, index, arr) => arr.indexOf(item) === index);
-                                                                                          
-console.log('20.', KeliuMasyvaBeDublikatu3(([[1, 2, 2, 2, 2, 2], [3, 2, 2], [4, 2, 2], [5, 5, 5, 5, 5]])));
+console.log('20.tikrainas variantas', KeliuMasyvaBeDublikatu3(([[1, 2, 2, 2, 2, 2], [3, 2, 2], [4, 2, 2], [5, 5, 5, 5, 5]])));
+console.log('20.1', KeliuMasyvaBeDublikatu3([[1, 2, 2, 2, 800, 1000, 100], [3, 64, 4,  58, 77, 5, 55, 55, 4, 4], [5, 6, 6, 9, 100, 9, 7,  7, 100]]));
+
+//Masyve yra pogrupis su pasikartojančiais elementais
+const KeliuMasyvaBeDublikatu2 = array => array.flat(Infinity).filter((item, index, arr) => arr.indexOf(item) === index);                                                                                            
+console.log('20.2', KeliuMasyvaBeDublikatu2([[1, 2, 2, 2, 800, [3, 800], 1000, 100], [3, 64, 2,  58, [77, 5, 55], 55, 4, 4], [5, 6, 6, 9, 100, 9, [6, 100, 45], 7,  7]]));
+
+
+
+
 const arr2 = [0, 1, [2, [3, [4, 5]]]];
 
 console.log(arr2.flat(2));
