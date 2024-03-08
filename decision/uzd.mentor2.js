@@ -231,10 +231,10 @@ iš skaičių.Veiksmingumas: stenkitės optimizuoti funkciją taip, kad
 ji veiktų kuo efektyviau su dideliais masyvais. Unikalumas: 
 grąžinamame masyve neturėtų būti pasikartojančių elementų.*/
 
-const KeliuMasyvaBeDublikatu = array => array.map(subArray => subArray.filter((item, index, arr) => arr.indexOf(item) === index)).flat();
+const KeliuMasyvaBeDublikatu = array => array.map(subArray => subArray.filter((item, index, arr) => arr.indexOf(item) === index)).flat().filter((item, index, arr) => arr.indexOf(item) === index);
                                                                                              
 
-console.log('20.', KeliuMasyvaBeDublikatu([[1, 2, 2, 100], [3,, 64, 58, 77, 5, 55, 55, 4, 4], [5, 6, 6, 9, 9, 7,  7]]));
+console.log('20.', KeliuMasyvaBeDublikatu([[1, 2, 2, 2, 800, 1000, 100], [3, 64, 2,  58, 77, 5, 55, 55, 4, 4], [5, 6, 6, 9, 100, 9, 7,  7]]));
 
 
 
