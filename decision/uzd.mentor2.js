@@ -237,7 +237,7 @@ grąžinamame masyve neturėtų būti pasikartojančių elementų.*/
 
 const KeliuMasyvaBeDublikatusuMap = array => array.map(subArray => subArray.filter((item, index, arr) => arr.indexOf(item) !== index));
 // map patikrina, ar kitas elementas yra toks pat, jei taip, tai pažymi, daugiau nei du [2, 2, 5, 6, 1000], [2, 2, 2, 2, 2], [2, 2]
-//kaip dirba map su filter map [1!=2 --- istrauk (1); (1, 2) patikrinto su kieta skaicu, (1, 2, 2) patikrinto su kieta skaicu,]
+//kaip dirba map su filter map [1!=2 --- istrauk (1); (1, 2) patikrinto su kieta skaicu, (1, 2, 2) patikrinto su kieta skaicu,i taip tolio]
 console.log('20.suMap', KeliuMasyvaBeDublikatusuMap([[1, 2, 2, 2, 800, 5, 5, 6, 1000, 6, 1000], [1, 2, 800, 2, 2, 1000, 2, 2, 2], [1, 2, 800, 2, 1000, 2]]));
 
 
@@ -247,8 +247,9 @@ console.log('20.tikrainas variantas', KeliuMasyvaBeDublikatu3([[1, 2, 2, 2, 800,
 
 //Masyve yra pogrupis su pasikartojančiais elementais
 
-const KeliuMasyvaBeDublikatusuMap2 = array => array.map(subArray => subArray.filter((item, index, arr) => arr.indexOf(item) !== index));                                                                                           
-console.log('20.su sub array', KeliuMasyvaBeDublikatusuMap2([[1, 2, 2, 2, 800, [3, 800, 3], 1000, 100], [3, 64, 2,  58, [77, 5, [6, 6, 5], 55, 5], 55, 4, 4], [5, 6, 6, 9, 100, 9, [6, 100, 45], 7,  7]]));
+//const KeliuMasyvaBeDublikatusuMap2 = array => array.flat(2)
+//.map(subArray => subArray.filter((item, index, arr) => arr.indexOf(item) !== index));                                                                                           
+//console.log('20.su sub array', KeliuMasyvaBeDublikatusuMap2([[1, 2, 2, 2, 800, [3, 800, 3], 1000, 100], [3, 64, 2,  58, [77, 5, [6, 6, 5], 55, 5], 55, 4, 4], [5, 6, 6, 9, 100, 9, [6, 100, 45], 7,  7]]));
 
 
 
