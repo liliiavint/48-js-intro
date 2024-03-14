@@ -254,7 +254,8 @@ for(const key in Draugai){
  
     }
    
-// for(const key of Draugai){
-//     key.age++
-//     }
+for(const key of Friends){
+    key.age++
+    }
+console.log(Friends);
 console.log(Draugai);
