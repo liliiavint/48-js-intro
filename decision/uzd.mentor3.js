@@ -1,7 +1,7 @@
 // 1.     Duomenų Objektas: Sukurkite objektą, kuris saugotų jūsų mėgstamiausios knygos pavadinimą, 
 // autorių ir leidimo metus. Išveskite kiekvieną objekto savybę naudojant for in ciklą.
 
-
+//kiekvieną objekto savybę 
 console.log('Uzdotys 1.')
 const dataBook = {
     knygos: "Kur dingo gandras Grantas?", 
@@ -48,7 +48,7 @@ const Friends = [
 for(const key of Friends){
     console.log(`${key.name} ${key.age} years old.`)
 }
-console.log('.....................................')
+console.log('..........................................')
 
 console.log('Uzdotis 3.')
 // 3.     Sąrašo Filtravimas: Turite objektų masyvą, kuriame saugoma informacija 
@@ -189,12 +189,16 @@ const sarasa2 = {
     marks: [2, 4, 6],
     phone: '86054584558',
 };
+function cauntKey(index){
 let arrLength = [ ];
-for (const key in sarasa2){
+for (const key in index){
     arrLength.push(key)
     
+    }
+    return arrLength;
 }
-console.log(arrLength.length)
+
+console.log(cauntKey(sarasa2))
 console.log('.....................................')
 
 console.log('Uzdotis 9.')
@@ -247,5 +251,10 @@ console.log('Uzdotis 10.')
 
 for(const key in Draugai){
     Draugai[key].age++
+ 
     }
-console.log(Draugai)
+   
+// for(const key of Draugai){
+//     key.age++
+//     }
+console.log(Draugai);
