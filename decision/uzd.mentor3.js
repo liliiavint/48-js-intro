@@ -168,8 +168,8 @@ console.log('Uzdotis 7.')
 // Naudodami for ciklą, raskite didžiausią skaičių masyve.
 
 
-let arrMax = [2, 4, 8, 6, 100]
-let max = 0;
+let arrMax = [2, 4, - 8, 6, 100]
+let max = - Infinity;
 for(let i = 0; i < arrMax.length; i++){
     if(arrMax[i] > max){
         max = arrMax[i]
@@ -177,6 +177,16 @@ for(let i = 0; i < arrMax.length; i++){
     
 }
 console.log(max)
+
+let arrMax2 = [2, 4, -8, 6, 100]
+let min = arrMax2[0];
+for(let i = 0; i < arrMax2.length; i++){
+    if(arrMax2[i] < min){
+        min = arrMax2[i]
+    }
+    
+}
+console.log(min)
 console.log('.....................................')
 
 console.log('Uzdotis 8.')
@@ -195,7 +205,7 @@ for (const key in index){
     arrLength.push(key)
     
     }
-    return arrLength;
+    return arrLength.length;
 }
 
 console.log(cauntKey(sarasa2))
